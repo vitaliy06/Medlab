@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".codeEmail">
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="198dp"
+        android:text="Введите код из E-mail"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editNumber2"
+        style="@android:style/Widget.DeviceDefault.EditText"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@drawable/border"
+        android:backgroundTint="#255E7393"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:maxLength="1"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/textView8"
+        app:layout_constraintEnd_toStartOf="@+id/editNumber3"
+        app:layout_constraintStart_toEndOf="@+id/editNumber1"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <EditText
+        android:id="@+id/editNumber3"
+        style="@android:style/Widget.DeviceDefault.EditText"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@drawable/border"
+        android:backgroundTint="#255E7393"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:maxLength="1"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/textView8"
+        app:layout_constraintEnd_toStartOf="@+id/editNumber4"
+        app:layout_constraintStart_toEndOf="@+id/editNumber2"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintVertical_bias="0.526" />
+
+    <EditText
+        android:id="@+id/editNumber4"
+        style="@android:style/Widget.DeviceDefault.EditText"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="80dp"
+        android:background="@drawable/border"
+        android:backgroundTint="#255E7393"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:maxLength="1"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/textView8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editNumber3"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <EditText
+        android:id="@+id/editNumber1"
+        style="@android:style/Widget.DeviceDefault.EditText"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="79dp"
+        android:background="@drawable/border"
+        android:backgroundTint="#1B5E7393"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:maxLength="1"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/textView8"
+        app:layout_constraintEnd_toStartOf="@+id/editNumber2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="251dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="394dp"
+        android:text="Отправить код повторно можно будет через 60 секунд"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button3"
+        style="@style/Widget.Material3.Button.IconButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:backgroundTint="#FFFFFF"
+        android:foreground="@drawable/border"
+        android:onClick="onClickNewCode"
+        android:text="Получить новый код"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editNumber3"
+        app:layout_constraintVertical_bias="0.00999999" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
