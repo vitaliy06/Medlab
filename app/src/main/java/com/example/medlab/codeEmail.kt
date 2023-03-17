@@ -1,5 +1,6 @@
 package com.example.medlab
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -41,6 +42,7 @@ class codeEmail : AppCompatActivity() {
         textView = findViewById(R.id.textView8)
         button = findViewById(R.id.button3)
         Log.d("code",i)
+        val intent = Intent(this, pin::class.java)
 
 
         val editText1 = findViewById<EditText>(R.id.editNumber1)
@@ -72,9 +74,12 @@ class codeEmail : AppCompatActivity() {
                             }
                             if(enteredCode == i){
                                 Log.d("request","verniy")
+                                startActivity(intent)
+
                             }
                             else{
                                 Log.d("request","ne verniy")
+                                editText4.error = "Неверный код"
                             }
                         }
                     }
@@ -90,87 +95,6 @@ class codeEmail : AppCompatActivity() {
 
         }
 
-        /*
-        editText1.addTextChangedListener(object : TextWatcher {
-            override fun afterTextChanged(s: Editable?) {
-                if(!s.isNullOrEmpty()){
-                    editText2.requestFocus()
-                }
-            }
-
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-                // не используется
-            }
-
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                //не использувется
-            }
-
-        })
-        editText2.addTextChangedListener(object : TextWatcher {
-            override fun afterTextChanged(s: Editable?) {
-                if(!s.isNullOrEmpty()){
-                    editText3.requestFocus()
-                }
-                else{
-                    editText1.requestFocus()
-                }
-            }
-
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-                // не используется
-            }
-
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                //не использувется
-            }
-
-        })
-        editText3.addTextChangedListener(object : TextWatcher {
-            override fun afterTextChanged(s: Editable?) {
-                if(!s.isNullOrEmpty()){
-                    editText4.requestFocus()
-                }
-                else{
-                    editText2.requestFocus()
-                }
-            }
-
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-                // не используется
-            }
-
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                //не использувется
-            }
-
-        })
-        editText4.addTextChangedListener(object : TextWatcher {
-            override fun afterTextChanged(s: Editable?) {
-                if(!s.isNullOrEmpty()){
-                    var enteredCode = editText1.text.toString()+editText2.text.toString()+editText3.text.toString()+s.toString()
-                    if(i==enteredCode){
-                        Log.d("request","pravilno")
-                    }
-                    else{
-                        Log.d("request","neverniy")
-                    }
-                }
-                else{
-                    editText3.requestFocus()
-                }
-            }
-
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-                // не используется
-            }
-
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                //не использувется
-            }
-
-        })
-*/
 
 
         if (button.visibility == View.INVISIBLE){

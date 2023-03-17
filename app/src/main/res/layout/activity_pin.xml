@@ -8,75 +8,84 @@
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="wrap_content"
+        android:layout_width="195dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
         android:text="Создайте пароль"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="108dp"
-        tools:layout_editor_absoluteY="153dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="65dp"
         android:text="Для защиты ваших персональных данных"
-        tools:layout_editor_absoluteX="65dp"
-        tools:layout_editor_absoluteY="201dp" />
-
-    <TextView
-        android:id="@+id/pin1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="12dp"
-        android:layout_weight="1"
-        android:text="●"
-        android:textAlignment="center"
-        android:textColor="@android:color/black"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toStartOf="@+id/pin3"
-        tools:layout_editor_absoluteY="249dp" />
-
-    <TextView
-        android:id="@+id/pin2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_weight="1"
-        android:text="●"
-        android:textAlignment="center"
-        android:textColor="@android:color/black"
-        android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@+id/pin4"
-        tools:layout_editor_absoluteY="249dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <TextView
         android:id="@+id/pin3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="156dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
         android:layout_weight="1"
-        android:text="●"
+        android:foreground="@drawable/circle"
         android:textAlignment="center"
-
         android:textColor="@android:color/black"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pin2"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <TextView
+        android:id="@+id/pin2"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_weight="1"
+        android:foreground="@drawable/circle"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/pin1"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <TextView
         android:id="@+id/pin4"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="152dp"
-        android:layout_marginTop="28dp"
-        android:layout_weight="1"
-        android:text="●"
-        android:textAlignment="center"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
 
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_weight="1"
+        android:foreground="@drawable/circle"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/pin3"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <TextView
+        android:id="@+id/pin1"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="24dp"
+        android:layout_weight="1"
+        android:foreground="@drawable/circle"
+        android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -87,60 +96,66 @@
         style="@style/Widget.Material3.Button.IconButton"
         android:layout_width="80dp"
         android:layout_height="80dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="104dp"
         android:backgroundTint="#F5F5F9"
         android:text="1"
         android:textColor="#000000"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="81dp"
-        tools:layout_editor_absoluteY="325dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <Button
         android:id="@+id/butttwo"
         style="@style/Widget.Material3.Button.IconButton"
         android:layout_width="80dp"
         android:layout_height="80dp"
+        android:layout_marginTop="104dp"
         android:backgroundTint="#F5F5F9"
         android:text="2"
         android:textColor="#000000"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="325dp" />
+        app:layout_constraintStart_toEndOf="@+id/buttone"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <Button
-        android:id="@+id/butthree"
+        android:id="@+id/buttthree"
         style="@style/Widget.Material3.Button.IconButton"
         android:layout_width="80dp"
         android:layout_height="80dp"
+        android:layout_marginTop="104dp"
         android:backgroundTint="#F5F5F9"
         android:text="3"
         android:textColor="#070303"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="241dp"
-        tools:layout_editor_absoluteY="325dp" />
+        app:layout_constraintStart_toEndOf="@+id/butttwo"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <Button
-        android:id="@+id/butfour"
+        android:id="@+id/buttfour"
         style="@style/Widget.Material3.Button.IconButton"
         android:layout_width="80dp"
         android:layout_height="80dp"
+        android:layout_marginStart="100dp"
         android:backgroundTint="#F5F5F9"
         android:text="4"
         android:textColor="#000000"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="81dp"
-        tools:layout_editor_absoluteY="405dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttone" />
 
     <Button
-        android:id="@+id/buttoseven"
+        android:id="@+id/buttseven"
         style="@style/Widget.Material3.Button.IconButton"
         android:layout_width="80dp"
         android:layout_height="80dp"
+        android:layout_marginStart="100dp"
         android:backgroundTint="#F5F5F9"
         android:text="7"
         android:textColor="#000000"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="81dp"
-        tools:layout_editor_absoluteY="485dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttfour" />
 
     <Button
         android:id="@+id/butteigh"
@@ -151,8 +166,8 @@
         android:text="8"
         android:textColor="#000000"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="485dp" />
+        app:layout_constraintStart_toEndOf="@+id/buttseven"
+        app:layout_constraintTop_toBottomOf="@+id/buttfive" />
 
     <Button
         android:id="@+id/buttfive"
@@ -163,8 +178,8 @@
         android:text="5"
         android:textColor="#000000"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="405dp" />
+        app:layout_constraintStart_toEndOf="@+id/buttfour"
+        app:layout_constraintTop_toBottomOf="@+id/butttwo" />
 
     <Button
         android:id="@+id/buttsix"
@@ -175,8 +190,8 @@
         android:text="6"
         android:textColor="#000000"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="241dp"
-        tools:layout_editor_absoluteY="405dp" />
+        app:layout_constraintStart_toEndOf="@+id/buttfive"
+        app:layout_constraintTop_toBottomOf="@+id/buttthree" />
 
     <Button
         android:id="@+id/buttnine"
@@ -189,21 +204,22 @@
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="241dp"
-        tools:layout_editor_absoluteY="485dp" />
+        app:layout_constraintStart_toEndOf="@+id/butteigh"
+        app:layout_constraintTop_toBottomOf="@+id/buttsix" />
 
     <Button
         android:id="@+id/buttzero"
         style="@style/Widget.Material3.Button.IconButton"
         android:layout_width="80dp"
         android:layout_height="80dp"
+        android:layout_marginStart="180dp"
         android:backgroundTint="#F5F5F9"
         android:text="0"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="565dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/butteigh" />
 
     <Button
         android:id="@+id/buttdel"
@@ -212,7 +228,7 @@
         android:layout_height="80dp"
         android:background="@drawable/circle"
         android:text="Button"
-        tools:layout_editor_absoluteX="241dp"
-        tools:layout_editor_absoluteY="565dp" />
+        app:layout_constraintStart_toEndOf="@+id/buttzero"
+        app:layout_constraintTop_toBottomOf="@+id/buttnine" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
