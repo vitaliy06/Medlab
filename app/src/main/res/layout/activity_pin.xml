@@ -215,6 +215,7 @@
         android:layout_marginStart="180dp"
         android:backgroundTint="#F5F5F9"
         android:text="0"
+        android:onClick="butDel"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="24sp"
@@ -227,7 +228,9 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:background="@drawable/circle"
-        android:text="Button"
+        android:foreground="@drawable/backspacee"
+        android:foregroundGravity="center_vertical|clip_horizontal|center_horizontal"
+        android:onClick="butDel"
         app:layout_constraintStart_toEndOf="@+id/buttzero"
         app:layout_constraintTop_toBottomOf="@+id/buttnine" />
 

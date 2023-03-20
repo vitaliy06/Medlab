@@ -12,6 +12,9 @@
         android:theme="@style/Theme.MedLab"
         tools:targetApi="31">
         <activity
+            android:name=".CheckPin"
+            android:exported="false" />
+        <activity
             android:name=".pin"
             android:exported="false" />
         <activity

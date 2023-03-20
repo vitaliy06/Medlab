@@ -1,6 +1,8 @@
 package com.example.medlab
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -31,23 +33,39 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        init( )
-        val viewPager = findViewById<ViewPager2>(R.id.viewPager2)
+
+        val sh = getSharedPreferences("data",Context.MODE_PRIVATE)
+        val pincode = sh.getString("pin","")
+        Log.d("pin",pincode.toString())
+
+            init( )
+            val viewPager = findViewById<ViewPager2>(R.id.viewPager2)
 
 
-        viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
-            override fun onPageSelected(position: Int) {
-                val textview = findViewById<TextView>(R.id.textView)
-                if(position==2){
-                    Log.d("position",position.toString())
-                    textview.text = "Завершить"
+            viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+                override fun onPageSelected(position: Int) {
+                    val textview = findViewById<TextView>(R.id.textView)
+
+                    if(position==2){
+                        Log.d("position",position.toString())
+                        textview.text = "Завершить"
+                        val sh = getSharedPreferences("data",Context.MODE_PRIVATE)
+                        val pincode = sh.getString("pin","")
+                        Log.d("pin",pincode.toString())
+                    }
+                    else{
+                        Log.d("position",position.toString())
+                        textview.text = "Пропустить"
+                        val sh = getSharedPreferences("data",Context.MODE_PRIVATE)
+                        val pincode = sh.getString("pin","")
+                        Log.d("pin",pincode.toString())
+                    }
                 }
-                else{
-                    Log.d("position",position.toString())
-                    textview.text = "Пропустить"
-                }
-            }
             })
+
+
+
+
     }
 
 
