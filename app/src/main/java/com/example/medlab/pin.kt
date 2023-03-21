@@ -2,6 +2,7 @@ package com.example.medlab
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -68,6 +69,13 @@ class pin : AppCompatActivity(), View.OnClickListener {
                 Log.d("pin", pincode)
             }
         }
+
+    }
+
+    fun onClickNext(view: View) {
+        val intent = Intent(this,cardOfCustomer::class.java)
+        startActivity(intent)
+
 
     }
 

@@ -34,6 +34,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val intent = Intent(this,pin::class.java)
+        startActivity(intent)
+
+
         val sh = getSharedPreferences("data",Context.MODE_PRIVATE)
         val pincode = sh.getString("pin","")
         Log.d("pin",pincode.toString())

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".cardOfCustomer">
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="195dp"
+        android:layout_height="79dp"
+        android:text="Создание карты пациента"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.050000012" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Пропустить"
+        android:textColor="#1A6FEE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.72"
+        app:layout_constraintStart_toEndOf="@+id/textView13"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.050000012" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Без карты пациента вы не сможете заказать анализы."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="365dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="10dp"
+        android:text="В картах пациентов будут храниться результаты анализов вас и ваших близких."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="355dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/border"
+        android:backgroundTint="#F5F5F9"
+        android:ems="10"
+        android:foreground="@drawable/border"
+        android:hint="   Имя"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+    <EditText
+        android:id="@+id/editTextTextSecondName"
+        android:layout_width="355dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/border"
+        android:backgroundTint="#F5F5F9"
+        android:ems="10"
+        android:foreground="@drawable/border"
+        android:hint="   Отчество"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextName" />
+
+    <EditText
+        android:id="@+id/editTextTextFamilia"
+        android:layout_width="355dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/border"
+        android:backgroundTint="#F5F5F9"
+        android:ems="10"
+        android:foreground="@drawable/border"
+        android:hint="   Фамилия"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextSecondName" />
+
+    <EditText
+        android:id="@+id/editTextDate"
+        style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
+        android:layout_width="355dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/border"
+        android:backgroundTint="#F5F5F9"
+        android:ems="10"
+        android:foreground="@drawable/border"
+        android:foregroundTintMode="add"
+        android:hint="   Дата рождения"
+        android:inputType="date"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextFamilia" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        style="@style/Widget.AppCompat.Spinner"
+        android:layout_width="355dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/border"
+        android:backgroundTint="#F5F5F9"
+        android:contentDescription="Пол"
+        android:dropDownWidth="wrap_content"
+        android:foreground="@drawable/border"
+        android:prompt="@string/spinner_hint"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
+
+    <Button
+        android:id="@+id/buttonCreatePerson"
+        android:layout_width="355dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="48dp"
+        android:backgroundTint="#1A6FEE"
+        android:text="Создать"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
