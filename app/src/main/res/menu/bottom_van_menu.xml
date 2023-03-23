@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_analyses"
+        android:icon="@drawable/analizes"
+        android:title="Анализы">
+
+    </item>
+    <item
+        android:id="@+id/nav_results"
+        android:icon="@drawable/results"
+        android:title="Результаты" />
+    <item
+        android:id="@+id/nav_support"
+        android:icon="@drawable/support"
+        android:title="Поддержка" />
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/user"
+        android:title="Профиль" />
+
+</menu>
