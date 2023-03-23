@@ -1,5 +1,6 @@
 package com.example.medlab
 
+import android.app.Dialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -42,6 +43,9 @@ class codeEmail : AppCompatActivity() {
         textView = findViewById(R.id.textView8)
         button = findViewById(R.id.button3)
         Log.d("code",i)
+        val dialog = Dialog(this)
+        dialog.setTitle("Код")
+
         val intent = Intent(this, pin::class.java)
 
 

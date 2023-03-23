@@ -34,8 +34,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val intent = Intent(this,MainPage::class.java)
-        startActivity(intent)
 
 
         val sh = getSharedPreferences("data",Context.MODE_PRIVATE)

@@ -8,6 +8,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 class MainPage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_main_page)
 
 
@@ -22,6 +23,7 @@ class MainPage : AppCompatActivity() {
                 R.id.nav_analyses -> {
                     // Действия при выборе элемента 1
                     val analyzesFragment = AnalysisFragment()
+                    super.finish()
                     supportFragmentManager.beginTransaction().replace(R.id.fragmentContainerView3,analyzesFragment).commit()
                     true
                 }

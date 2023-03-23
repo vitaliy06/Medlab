@@ -25,6 +25,7 @@
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:clickable="true"
         android:text="Пропустить"
         android:textColor="#1A6FEE"
         app:layout_constraintBottom_toBottomOf="parent"
